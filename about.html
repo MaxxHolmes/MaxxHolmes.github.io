@@ -3,16 +3,26 @@ layout: default
 ---
 
 <div id="main">
-	<article class="post">
-		<header>
-			<div class="title">
-				<h2><a href="#">About Me</a></h2>
-			</div>
-		</header>
-		<span class="image featured"><img src="/images/powerstance.jpg" alt="" /></span>
-		<p> Hello </p>
-	</article>
-</div>
+<article class="post">
+	<header>
+		<div class="title">
+			<h2><a href="#">About Me</a></h2>
+		</div>
+		<div class="meta">
+			<time class="published" datetime="2020-05-08">May 08 2020</time>
+			<a href="" class="author"><span class="name">Maxx Holmes</span><img src="/images/avatar.jpg" alt="" /></a>
+		</div>
+	</header>
+	<span class="image featured"><img src="/images/powerstance.jpg" alt="" /></span>
+		{{ post.summary }}
+		<p> </p>
+	<footer>
+		<ul class="stats">
+			<li><a href="#" class="icon solid fa-heart">0</a></li>
+			<li><a href="#" class="icon solid fa-comment">0</a></li>
+		</ul>
+	</footer>
+</article>
 
 <!-- Sidebar -->
 <section id="sidebar">
