@@ -1,18 +1,20 @@
 ---
-layout: default
+layout: home
 ---
+
 <div id="main">
-	{% assign rows = pagninator.posts.size %}	
-	{% for post in paginator.posts limit:3 %}
-	{% include post_card.html %}
-	{% endfor %}
+	<article class="post">
+		<header>
+			<div class="title">
+				<h2><a href="#">About Me</a></h2>
+			</div>
+		</header>
+		<span class="image featured"><img src="/images/powerstance.jpg" alt="" /></span>
 
-	<!-- Pagination -->
-	<ul class="actions pagination">
-		<li><a href="all_blogs.html" class="button large next">See All Blogs</a></li>
-	</ul>
+		<p> Hello </p>
 
 
+	</article>
 </div>
 
 <!-- Sidebar -->
