@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<div id="main">
+	{% assign rows = pagninator.posts.size %}	
+	{% for post in paginator.posts limit:3 %}
+	{% include post_card.html %}
+	{% endfor %}
+
+	<!-- Pagination -->
+	<ul class="actions pagination">
+		<li><a href="all_blogs.html" class="button large next">See All Blogs</a></li>
+	</ul>
+
+
+</div>
+
+<!-- Sidebar -->
+<section id="sidebar">
+	<!-- Intro -->
+	<section id="intro">
+		<header>
+			<h2>Maxx Holmes</h2>
+			<p>PhD Student @ University of Leeds</p>
+			<p>Computational Physiology Lab</p>
+		</header>
+	</section>
+	<!-- Mini Posts -->
+	<section>
+		<div class="mini-posts">
+			{% for post in paginator.posts limit:3 offset:0 %}
+			{% include mini_post_card.html %}
+			{% endfor %}
+		</div>
+	</section>
+
+	<!-- Posts List -->
+	<section>
+		<ul class="posts">
+			<li>
+				{% for post in paginator.posts limit:5 offset:0 %}
+				{% include tiny_post_card.html %}
+				{% endfor %}
+			</li>
+		</ul>
+	</section>
+
+	<!-- About -->
+	<section class="blurb">
+		<h2>About</h2>
+		<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+		<p>I'm a PhD student in the Computational Physiology Lab at the University of Leeds with a background in Physics, Maths & Data Science.</p>
+		<p>I develop models and tools to study the underlying mechanisms of cardiac arrhythmias.</p>
+		<ul class="actions">
+			<li><a href="#" class="button">Learn More</a></li>
+		</ul>
+	</section>
+
+	<!-- Footer -->
+	<section id="footer">
+		<ul class="icons">
+			<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+		</ul>
+		<p class="copyright">&copy; Maxx Holmes, 2020.</p>
+	</section>
+
+</section>

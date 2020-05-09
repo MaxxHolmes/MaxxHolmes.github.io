@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<html>
+	<head>
+		{% include head.html %}
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+			{% include header_bar.html %}
+			<section ID="Menu">
+				{% include menu.html %}
+			</section>
+
+			{{content}}
+
+		</div>
+
+	<!-- Scripts -->
+		{% include js_footer.html %}
+
+	</body>
+</html>
