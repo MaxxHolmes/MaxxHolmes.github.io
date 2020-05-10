@@ -32,7 +32,7 @@ pagination:
   limit: 0
   sort_field: 'date'
   sort_reverse: true
-  permalink: /
+  permalink: 
 # Build settings
 markdown: kramdown
 theme: minima
