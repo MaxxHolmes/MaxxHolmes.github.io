@@ -26,19 +26,14 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "//maxxholmes.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: MaxxSci
 github_username:  MaxxHolmes
-pagination:
-  enabled: true
-  per_page: 5
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-  permalink: 
+paginate: 5
+paginate_path: "/blog/page:num"
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-paginate-v2
+  - jekyll-paginate
 sass:
   sass_dir: /assets/sass/
 css:
