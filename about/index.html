@@ -1,9 +1,91 @@
----
-layout: default
-pagination:
-    enabled: true
----
-<div id="main">
+<!doctype html>
+<html lang="en">
+
+<html>
+	<head>
+		<title> Maxx Holmes </title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+			<header id="header">
+	<h1><a href="/index.html">Maxx Holmes</a></h1>
+	<nav class="links">
+		<ul>
+			<li><a href="/about">About Me</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Projects</a></li>
+			<li><a href="#">Publications</a></li>
+			<li><a href="#">Contact Me</a></li>
+		</ul>
+	</nav>
+	<nav class="main">
+		<ul>
+			<li class="search">
+				<a class="fa-search" href="#search">Search</a>
+				<form id="search" method="get" action="#">
+					<input type="text" name="query" placeholder="Search" />
+				</form>
+			</li>
+			<li class="menu">
+				<a class="fa-bars" href="#menu">Menu</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+			<section ID="Menu">
+				<section id="menu">
+
+	<!-- Search -->
+	<section>
+		<form class="search" method="get" action="#">
+			<input type="text" name="query" placeholder="Search" />
+		</form>
+	</section>
+
+	<!-- Links -->
+	<section>
+		<ul class="links">
+			<li>
+				<a href="/about.html">
+					<h3>About Me</h3>
+					<p>Who I am & what I do</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h3>Blog</h3>
+					<p>Find all of my blog posts here</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h3>Projects</h3>
+					<p>Non-academic endevours & unpublished projects</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h3>Publications</h3>
+					<p>Find links to all my publications here</p>
+				</a>
+			</li>
+			<li>	
+				<a href="#">
+					<h3>Contact Me</h3>
+					<p>Find me on social media or by email</p>
+				</a>
+			</li>
+		</ul>
+	</section>
+</section>
+			</section>
+
+			<div id="main">
 	<article class="post">
 		<header>
 			<div class="title">
@@ -11,7 +93,7 @@ pagination:
 			</div>
 			<div class="meta">
 				<time class="published" datetime="2020-05-08">May 08 2020</time>
-				<a href="{{post.url}}" class="author"><span class="name">Maxx Holmes </span><img src="/images/avatar.jpg" alt="" /></a>
+				<a href="" class="author"><span class="name">Maxx Holmes </span><img src="/images/avatar.jpg" alt="" /></a>
 			</div>
 		</header>
 		<p>
@@ -57,9 +139,16 @@ pagination:
 	<!-- Mini Posts -->
 	<section>
 		<div class="mini-posts">
-			{% for post in paginator.posts limit:3 %}
-			{% include mini_post_card.html %}
-			{% endfor %}
+			
+			<article class="mini-post">
+	<header>
+		<h3><a href="/general/2020/05/06/My-Personal-Website.html">My Personal Website</a></h3>
+		<time class="published" datetime=post.date>06 May 2020</time>
+		<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+	</header>
+	<a href="/general/2020/05/06/My-Personal-Website.html" class="image"><img src=/images/conference.JPG alt="" /></a>
+</article>
+			
 		</div>
 	</section>
 
@@ -67,9 +156,15 @@ pagination:
 	<section>
 		<ul class="posts">
 			<li>
-				{% for post in paginator.posts limit:5 %}
-				{% include tiny_post_card.html %}
-				{% endfor %}
+				
+				<article>
+	<header>
+		<h3><a href="/general/2020/05/06/My-Personal-Website.html">My Personal Website</a></h3>
+		<time class="published" datetime="2020-05-06 23:42:56 +0100">06 May 2020</time>
+	</header>
+	<a href="/general/2020/05/06/My-Personal-Website.html" class="image"><img src="" alt="" /></a>
+</article>
+				
 			</li>
 		</ul>
 	</section>
@@ -96,3 +191,16 @@ pagination:
 	</section>
 
 </section>
+
+		</div>
+
+	<!-- Scripts -->
+		<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
