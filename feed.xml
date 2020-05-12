@@ -1,4 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="//maxxholmes.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="//maxxholmes.github.io//" rel="alternate" type="text/html" /><updated>2020-05-12T16:53:30+01:00</updated><id>//maxxholmes.github.io//feed.xml</id><title type="html">Maxx Holmes</title><subtitle>Welcome to my website about science, programming, and my PhD journey.</subtitle><entry><title type="html">#100DaysOfCode Day 1: Project Euler Problems 1, 2 &amp;amp; 3</title><link href="//maxxholmes.github.io//100daysofcode/2020/05/11/100DaysOfCode-Day1.html" rel="alternate" type="text/html" title="#100DaysOfCode Day 1: Project Euler Problems 1, 2 &amp; 3" /><published>2020-05-11T21:00:00+01:00</published><updated>2020-05-11T21:00:00+01:00</updated><id>//maxxholmes.github.io//100daysofcode/2020/05/11/#100DaysOfCode-Day1</id><content type="html" xml:base="//maxxholmes.github.io//100daysofcode/2020/05/11/100DaysOfCode-Day1.html">&lt;p&gt;&lt;strong&gt;#100DaysOfCode Day 1: Project Euler Problems 1, 2 &amp;amp; 3&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="//maxxholmes.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="//maxxholmes.github.io//" rel="alternate" type="text/html" /><updated>2020-05-12T23:59:45+01:00</updated><id>//maxxholmes.github.io//feed.xml</id><title type="html">Maxx Holmes</title><subtitle>Welcome to my website about science, programming, and my PhD journey.</subtitle><entry><title type="html">#100DaysOfCode Day 2: Jekyll and Footer Icons</title><link href="//maxxholmes.github.io//100daysofcode/2020/05/12/100DaysOfCode-Day2.html" rel="alternate" type="text/html" title="#100DaysOfCode Day 2: Jekyll and Footer Icons" /><published>2020-05-12T22:00:00+01:00</published><updated>2020-05-12T22:00:00+01:00</updated><id>//maxxholmes.github.io//100daysofcode/2020/05/12/#100DaysOfCode-Day2</id><content type="html" xml:base="//maxxholmes.github.io//100daysofcode/2020/05/12/100DaysOfCode-Day2.html">&lt;p&gt;&lt;strong&gt;#100DaysOfCode Day 2: Using Jekyll &amp;amp; Fixing Footer Icons&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For Day 2, I only had about an hour and a half to do this challenge between my PhD work and a weekly pub quiz with the science boys! (If you’re interested in our lab’s stuff, you can find their own websites at &lt;a href=&quot;https://harleysc.github.io/&quot;&gt;harley-sc.github.io&lt;/a&gt; and &lt;a href=&quot;https://tmdsheard.github.io/&quot;&gt;tmdsheard.github.io&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;I decided to make a small improvement to my website with the inclusion of a footer containing icons linking to my various social media platforms. This will also help me when it comes to developing a “contact me” page!&lt;/p&gt;
+
+&lt;p&gt;I decided to use the icons from &lt;a href=&quot;fontawesome.com&quot;&gt;Font Awesome&lt;/a&gt; as they have very clean icons, and a lot of fun variety which I enjoyed looking through - the space themed ones are particularly excellent and I’m going to try think of a project where I can use those!&lt;/p&gt;
+
+&lt;p&gt;For those who aren’t aware, this website is built using the Jekyll Ruby framework, which makes generating the site locally very straight forward - originally this used a Ruby gem called Jekyll-Pagination to product html pages following the same format for my blog posts, with me only needing to produce the content in markdown, but as I wanted multiple sites to be “paginated” I updated this to Jekyll-Pagination-v2, which unfortunately isn’t GitHub-Pages friendly, however I’m able to simply generate the site and copy that over to the local repository for it!&lt;/p&gt;
+
+&lt;p&gt;Using Jekyll, each page is generated using a fairly simple html file, this one below is the one I use for each of my posts! I have edited the code slightly - as while writing this post I found that including the proper notation for the liquid template language that Jekyll uses will import my code into the blog! The &lt;strong&gt;include statements should be % include x.html % wrapped in {}, whereas the content line should be wrapped in two {}.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+		{ include head.html }
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;single is-preload&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrapper&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+			{ include header_bar.html }
+			&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ID=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Menu&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+				{ include menu.html }
+			&lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+
+			{content}
+
+			&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;footer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+				{ include footer.html }
+			&lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+	&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Scripts --&amp;gt;&lt;/span&gt;
+		{ include js_footer.html }
+
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Fairly simple right? The head, header_bar, menu, footer and js_footer files are included on every page of this website and so I do not need to rewrite them for every page, instead I can simply import them!&lt;/p&gt;
+
+&lt;p&gt;The below code snippet is what I use as the framework for each of these posts&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;article class=&quot;post&quot;&amp;gt;
+	&amp;lt;header&amp;gt;
+		&amp;lt;div class=&quot;title&quot;&amp;gt;
+			&amp;lt;h2&amp;gt;&amp;lt;a href=&quot;&quot;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/h2&amp;gt;
+		&amp;lt;/div&amp;gt;
+		&amp;lt;div class=&quot;meta&quot;&amp;gt;
+			&amp;lt;time class=&quot;published&quot; datetime=post.date&amp;gt;&amp;lt;/time&amp;gt;
+			&amp;lt;a href=&quot;&quot; class=&quot;author&quot;&amp;gt;&amp;lt;span class=&quot;name&quot;&amp;gt;Maxx Holmes&amp;lt;/span&amp;gt;	&amp;lt;img src=&quot;/images/avatar.jpg&quot; alt=&quot;&quot; /&amp;gt;&amp;lt;/a&amp;gt;
+		&amp;lt;/div&amp;gt;
+	&amp;lt;/header&amp;gt;
+	&amp;lt;a href=&quot;&quot; span class=&quot;image featured&quot;&amp;gt; &amp;lt;img src= alt= =&quot;&quot; /&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+		
+		&amp;lt;p&amp;gt; &amp;lt;/p&amp;gt;
+	&amp;lt;footer&amp;gt;
+		&amp;lt;ul class=&quot;stats&quot;&amp;gt;
+			
+			&amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot; class=&quot;icon solid fa-heart&quot;&amp;gt;0&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+			&amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot; class=&quot;icon solid fa-comment&quot;&amp;gt;0&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+		&amp;lt;/ul&amp;gt;
+	&amp;lt;/footer&amp;gt;
+&amp;lt;/article&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Each aspect of the post other than the structure is taken from a markdown file containing the information and content of each blog post! The keen eye will notice that the liking / commenting section at the bottom is a simple placeholder for now and have no actual function (an interesting problem for when I have more time and more knowledge!)&lt;/p&gt;
+
+&lt;p&gt;The icons at the bottom were fairly simple to produce, the code and icons themselves were taken from &lt;a href=&quot;fontawesome.com&quot;&gt;Font Awesome&lt;/a&gt; and then called on each time using variations of the following code snippet:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;li&amp;gt;&amp;lt;a href=&quot;https://twitter.com/MaxxSci&quot; class=&quot;icon brands fa-twitter&quot;&amp;gt;&amp;lt;span class=&quot;label&quot;&amp;gt;Twitter&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Closing Thoughts:&lt;/strong&gt; Jekyll is an interesting framework to use - I have no real experience in Ruby my experience is purely using the documentation on the &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll Website&lt;/a&gt;, but it’s very handy to producing many pages of the same style, and for structuring new webpages. It feels very clean and straightforward to use. The icons themselves were a fairly easy addition and I feel add to the sites design and professionalism - even if two of them are instagram and spotify.&lt;/p&gt;
+
+&lt;p&gt;Peace xo&lt;/p&gt;</content><author><name></name></author><summary type="html">#100DaysOfCode Day 2: Using Jekyll &amp;amp; Fixing Footer Icons</summary></entry><entry><title type="html">#100DaysOfCode Day 1: Project Euler Problems 1, 2 &amp;amp; 3</title><link href="//maxxholmes.github.io//100daysofcode/2020/05/11/100DaysOfCode-Day1.html" rel="alternate" type="text/html" title="#100DaysOfCode Day 1: Project Euler Problems 1, 2 &amp; 3" /><published>2020-05-11T21:00:00+01:00</published><updated>2020-05-11T21:00:00+01:00</updated><id>//maxxholmes.github.io//100daysofcode/2020/05/11/#100DaysOfCode-Day1</id><content type="html" xml:base="//maxxholmes.github.io//100daysofcode/2020/05/11/100DaysOfCode-Day1.html">&lt;p&gt;&lt;strong&gt;#100DaysOfCode Day 1: Project Euler Problems 1, 2 &amp;amp; 3&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;For the first day of my #100DaysToCode, I will be solving problems from &lt;a href=&quot;https://projecteuler.net&quot;&gt;Project Euler&lt;/a&gt;, uploading the solutions to my &lt;a href=&quot;https://github.com/MaxxHolmes&quot;&gt;GitHub&lt;/a&gt;, and producing a blog post explaining my solutions to them with code snippets to improve my use of HTML, CSS &amp;amp; Markdown. I will not be posting the actual answers to these problems as to spoil anyones fun!&lt;/p&gt;
 

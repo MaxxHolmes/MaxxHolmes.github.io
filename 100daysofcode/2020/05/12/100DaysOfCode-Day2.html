@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<html>
+	<head>
+		<title> Maxx Holmes </title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+
+	<body class="single is-preload">
+
+		<div id="wrapper">
+			<header id="header">
+	<h1><a href="/index.html">Maxx Holmes</a></h1>
+	<nav class="links">
+		<ul>
+			<li><a href="/about">About Me</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Projects</a></li>
+			<li><a href="#">Publications</a></li>
+			<li><a href="#">Contact Me</a></li>
+		</ul>
+	</nav>
+	<nav class="main">
+		<ul>
+			<li class="search">
+				<a class="fa-search" href="#search">Search</a>
+				<form id="search" method="get" action="#">
+					<input type="text" name="query" placeholder="Search" />
+				</form>
+			</li>
+			<li class="menu">
+				<a class="fa-bars" href="#menu">Menu</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+			<section ID="Menu">
+				<section id="menu">
+
+	<!-- Search -->
+	<section>
+		<form class="search" method="get" action="#">
+			<input type="text" name="query" placeholder="Search" />
+		</form>
+	</section>
+
+	<!-- Links -->
+	<section>
+		<ul class="links">
+			<li>
+				<a href="/about.html">
+					<h3>About Me</h3>
+					<p>Who I am & what I do</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h3>Blog</h3>
+					<p>Find all of my blog posts here</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h3>Projects</h3>
+					<p>Non-academic endevours & unpublished projects</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h3>Publications</h3>
+					<p>Find links to all my publications here</p>
+				</a>
+			</li>
+			<li>	
+				<a href="#">
+					<h3>Contact Me</h3>
+					<p>Find me on social media or by email</p>
+				</a>
+			</li>
+		</ul>
+	</section>
+</section>
+			</section>
+
+			<div id="main">
+	<article class="post">
+		<header>
+			<div class="title">
+				<h2><a href="#">#100DaysOfCode Day 2: Jekyll and Footer Icons</a></h2>
+				<p>A brief overview of how I build my website with Jekyll</p>
+			</div>
+			<div class="meta">
+				<time class="published" datetime="page.date">12 May 2020</time>
+				<a href="#" class="author"><span class="name">Maxx Holmes</span><img src="/images/avatar.jpg" alt="" /></a>
+			</div>
+		</header>
+		<span class="image featured"><img src=/images/100DaysOfCodeDay2.png alt="" /></span>
+		<p><strong>#100DaysOfCode Day 2: Using Jekyll &amp; Fixing Footer Icons</strong></p>
+
+<p>For Day 2, I only had about an hour and a half to do this challenge between my PhD work and a weekly pub quiz with the science boys! (If you’re interested in our lab’s stuff, you can find their own websites at <a href="https://harleysc.github.io/">harley-sc.github.io</a> and <a href="https://tmdsheard.github.io/">tmdsheard.github.io</a>).</p>
+
+<p>I decided to make a small improvement to my website with the inclusion of a footer containing icons linking to my various social media platforms. This will also help me when it comes to developing a “contact me” page!</p>
+
+<p>I decided to use the icons from <a href="fontawesome.com">Font Awesome</a> as they have very clean icons, and a lot of fun variety which I enjoyed looking through - the space themed ones are particularly excellent and I’m going to try think of a project where I can use those!</p>
+
+<p>For those who aren’t aware, this website is built using the Jekyll Ruby framework, which makes generating the site locally very straight forward - originally this used a Ruby gem called Jekyll-Pagination to product html pages following the same format for my blog posts, with me only needing to produce the content in markdown, but as I wanted multiple sites to be “paginated” I updated this to Jekyll-Pagination-v2, which unfortunately isn’t GitHub-Pages friendly, however I’m able to simply generate the site and copy that over to the local repository for it!</p>
+
+<p>Using Jekyll, each page is generated using a fairly simple html file, this one below is the one I use for each of my posts! I have edited the code slightly - as while writing this post I found that including the proper notation for the liquid template language that Jekyll uses will import my code into the blog! The <strong>include statements should be % include x.html % wrapped in {}, whereas the content line should be wrapped in two {}.</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		{ include head.html }
+	<span class="nt">&lt;/head&gt;</span>
+
+	<span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">"single is-preload"</span><span class="nt">&gt;</span>
+
+		<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
+			{ include header_bar.html }
+			<span class="nt">&lt;section</span> <span class="na">ID=</span><span class="s">"Menu"</span><span class="nt">&gt;</span>
+				{ include menu.html }
+			<span class="nt">&lt;/section&gt;</span>
+
+			{content}
+
+			<span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"footer"</span><span class="nt">&gt;</span>
+				{ include footer.html }
+			<span class="nt">&lt;/section&gt;</span>
+
+		<span class="nt">&lt;/div&gt;</span>
+
+	<span class="c">&lt;!-- Scripts --&gt;</span>
+		{ include js_footer.html }
+
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Fairly simple right? The head, header_bar, menu, footer and js_footer files are included on every page of this website and so I do not need to rewrite them for every page, instead I can simply import them!</p>
+
+<p>The below code snippet is what I use as the framework for each of these posts</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;article class="post"&gt;
+	&lt;header&gt;
+		&lt;div class="title"&gt;
+			&lt;h2&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/h2&gt;
+		&lt;/div&gt;
+		&lt;div class="meta"&gt;
+			&lt;time class="published" datetime=post.date&gt;&lt;/time&gt;
+			&lt;a href="" class="author"&gt;&lt;span class="name"&gt;Maxx Holmes&lt;/span&gt;	&lt;img src="/images/avatar.jpg" alt="" /&gt;&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/header&gt;
+	&lt;a href="" span class="image featured"&gt; &lt;img src= alt= ="" /&gt;&lt;/span&gt;&lt;/a&gt;
+		
+		&lt;p&gt; &lt;/p&gt;
+	&lt;footer&gt;
+		&lt;ul class="stats"&gt;
+			
+			&lt;li&gt;&lt;a href="#" class="icon solid fa-heart"&gt;0&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#" class="icon solid fa-comment"&gt;0&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/footer&gt;
+&lt;/article&gt;
+</code></pre></div></div>
+
+<p>Each aspect of the post other than the structure is taken from a markdown file containing the information and content of each blog post! The keen eye will notice that the liking / commenting section at the bottom is a simple placeholder for now and have no actual function (an interesting problem for when I have more time and more knowledge!)</p>
+
+<p>The icons at the bottom were fairly simple to produce, the code and icons themselves were taken from <a href="fontawesome.com">Font Awesome</a> and then called on each time using variations of the following code snippet:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;li&gt;&lt;a href="https://twitter.com/MaxxSci" class="icon brands fa-twitter"&gt;&lt;span class="label"&gt;Twitter&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+</code></pre></div></div>
+
+<p><strong>Closing Thoughts:</strong> Jekyll is an interesting framework to use - I have no real experience in Ruby my experience is purely using the documentation on the <a href="https://jekyllrb.com/">Jekyll Website</a>, but it’s very handy to producing many pages of the same style, and for structuring new webpages. It feels very clean and straightforward to use. The icons themselves were a fairly easy addition and I feel add to the sites design and professionalism - even if two of them are instagram and spotify.</p>
+
+<p>Peace xo</p>
+
+		<footer>
+			<ul class="stats">
+				<li><a href="#">General</a></li>
+				<li><a href="#" class="icon solid fa-heart">0</a></li>
+				<li><a href="#" class="icon solid fa-comment">0</a></li>
+			</ul>
+		</footer>
+	</article>
+</div>
+
+			<section id="footer">
+				<ul class="icons">
+	<li><a href="https://twitter.com/MaxxSci" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+	<li><a href="https://github.com/MaxxHolmes" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+	<li><a href="https://www.linkedin.com/in/maxxholmes/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+	<li><a href="https://www.instagram.com/the_maxx_holmes/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+	<li><a href="https://open.spotify.com/user/kilimanjabro?si=YsTNeDLBT9ey1x_nv0RtcQ" class="icon brands fa-spotify"><span class="label">Spotify</span></a></li>
+	<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+</ul>
+<p class="copyright">&copy; Maxx Holmes, 2020.</p>
+			</section>
+
+		</div>
+
+	<!-- Scripts -->
+		<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
